@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: srv-cnt
-          image: 'terezabisharyan/simple-nodejs:b6ed1af'
+          image: 'terezabisharyan/app-server:b6ed1af'
           ports:
             - containerPort: 4000
