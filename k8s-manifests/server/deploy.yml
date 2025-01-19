@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deploy
+  namespace: app-ns
+spec:
+  selector:
+    matchLabels:
+      app: srv
+  template:
+    metadata:
+      labels:
+        app: srv
+    spec:
+      containers:
+        - name: srv-cnt
+          image: 'terezabisharyan/app-server:1234567'
+          ports:
+            - containerPort: 4000

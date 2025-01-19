@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deploy
+  namespace: app-ns
+spec:
+  selector:
+    matchLabels:
+      app: client
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client-cnt
+          image: 'terezabisharyan/app-client:1234567'
+          ports:
+            - containerPort: 3000
